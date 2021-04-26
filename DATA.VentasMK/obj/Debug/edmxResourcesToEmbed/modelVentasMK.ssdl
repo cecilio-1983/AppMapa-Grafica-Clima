@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VentasMkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="puntos_de_interes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Latitud" Type="decimal" Precision="9" Scale="6" Nullable="false" />
+    <Property Name="Longitud" Type="decimal" Precision="9" Scale="6" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Venta" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+    <Property Name="Idzona" Type="int" />
+  </EntityType>
+  <EntityType Name="Zonas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_puntos_de_interes_Zona">
+    <End Role="Zonas" Type="Self.Zonas" Multiplicity="0..1" />
+    <End Role="puntos_de_interes" Type="Self.puntos_de_interes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zonas">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="puntos_de_interes">
+        <PropertyRef Name="Idzona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VentasMkModelStoreContainer">
+    <EntitySet Name="puntos_de_interes" EntityType="Self.puntos_de_interes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zonas" EntityType="Self.Zonas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_puntos_de_interes_Zona" Association="Self.fk_puntos_de_interes_Zona">
+      <End Role="Zonas" EntitySet="Zonas" />
+      <End Role="puntos_de_interes" EntitySet="puntos_de_interes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

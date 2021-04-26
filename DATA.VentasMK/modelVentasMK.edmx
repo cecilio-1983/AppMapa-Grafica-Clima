@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VentasMkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="puntos_de_interes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Latitud" Type="decimal" Precision="9" Scale="6" Nullable="false" />
+          <Property Name="Longitud" Type="decimal" Precision="9" Scale="6" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Venta" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="Idzona" Type="int" />
+        </EntityType>
+        <EntityType Name="Zonas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_puntos_de_interes_Zona">
+          <End Role="Zonas" Type="Self.Zonas" Multiplicity="0..1" />
+          <End Role="puntos_de_interes" Type="Self.puntos_de_interes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zonas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="puntos_de_interes">
+              <PropertyRef Name="Idzona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VentasMkModelStoreContainer">
+          <EntitySet Name="puntos_de_interes" EntityType="Self.puntos_de_interes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zonas" EntityType="Self.Zonas" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_puntos_de_interes_Zona" Association="Self.fk_puntos_de_interes_Zona">
+            <End Role="Zonas" EntitySet="Zonas" />
+            <End Role="puntos_de_interes" EntitySet="puntos_de_interes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VentasMkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="VentasMkEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Zonas" EntityType="VentasMkModel.Zonas" />
+          <EntitySet Name="puntos_de_interes" EntityType="VentasMkModel.puntos_de_interes" />
+          <AssociationSet Name="fk_puntos_de_interes_Zona" Association="VentasMkModel.fk_puntos_de_interes_Zona">
+            <End Role="Zonas" EntitySet="Zonas" />
+            <End Role="puntos_de_interes" EntitySet="puntos_de_interes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Zonas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="puntos_de_interes" Relationship="VentasMkModel.fk_puntos_de_interes_Zona" FromRole="Zonas" ToRole="puntos_de_interes" />
+        </EntityType>
+        <EntityType Name="puntos_de_interes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Latitud" Type="Decimal" Nullable="false" Precision="9" Scale="6" />
+          <Property Name="Longitud" Type="Decimal" Nullable="false" Precision="9" Scale="6" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Venta" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="Idzona" Type="Int32" />
+          <NavigationProperty Name="Zonas" Relationship="VentasMkModel.fk_puntos_de_interes_Zona" FromRole="puntos_de_interes" ToRole="Zonas" />
+        </EntityType>
+        <Association Name="fk_puntos_de_interes_Zona">
+          <End Type="VentasMkModel.Zonas" Role="Zonas" Multiplicity="0..1" />
+          <End Type="VentasMkModel.puntos_de_interes" Role="puntos_de_interes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zonas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="puntos_de_interes">
+              <PropertyRef Name="Idzona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VentasMkModelStoreContainer" CdmEntityContainer="VentasMkEntities">
+          <EntitySetMapping Name="Zonas">
+            <EntityTypeMapping TypeName="VentasMkModel.Zonas">
+              <MappingFragment StoreEntitySet="Zonas">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="puntos_de_interes">
+            <EntityTypeMapping TypeName="VentasMkModel.puntos_de_interes">
+              <MappingFragment StoreEntitySet="puntos_de_interes">
+                <ScalarProperty Name="Idzona" ColumnName="Idzona" />
+                <ScalarProperty Name="Venta" ColumnName="Venta" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+                <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

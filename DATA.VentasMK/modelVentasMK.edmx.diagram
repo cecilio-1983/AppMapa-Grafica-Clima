@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="44134ca22aa947c1a7f3ca547888a22a" Name="Diagram1">
+        <EntityTypeShape EntityType="VentasMkModel.Zonas" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="VentasMkModel.puntos_de_interes" Width="1.5" PointX="3" PointY="5" />
+        <AssociationConnector Association="VentasMkModel.fk_puntos_de_interes_Zona" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

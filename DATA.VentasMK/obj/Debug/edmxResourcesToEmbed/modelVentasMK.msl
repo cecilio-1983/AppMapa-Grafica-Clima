@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VentasMkModelStoreContainer" CdmEntityContainer="VentasMkEntities">
+    <EntitySetMapping Name="Zonas">
+      <EntityTypeMapping TypeName="VentasMkModel.Zonas">
+        <MappingFragment StoreEntitySet="Zonas">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="puntos_de_interes">
+      <EntityTypeMapping TypeName="VentasMkModel.puntos_de_interes">
+        <MappingFragment StoreEntitySet="puntos_de_interes">
+          <ScalarProperty Name="Idzona" ColumnName="Idzona" />
+          <ScalarProperty Name="Venta" ColumnName="Venta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+          <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

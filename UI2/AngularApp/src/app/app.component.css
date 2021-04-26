@@ -1,0 +1,22 @@
+#divMapa
+{
+ width:80% ;
+}
+mat-tab-label, .mat-tab-link {
+  color: #0c074f!important;
+}
+.mat-tab-body-wrapper {
+  width:80% ;
+  height: 80%;
+}
+.ct-post h1 {
+  padding-bottom: 0.5rem;
+  margin: 0;
+  font-size: 2.488rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.centrado{text-align:center;padding:8px;}

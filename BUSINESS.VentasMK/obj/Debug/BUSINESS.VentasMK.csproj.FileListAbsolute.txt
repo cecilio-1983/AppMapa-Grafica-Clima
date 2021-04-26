@@ -1,0 +1,16 @@
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\BUSINESS.VentasMK.dll
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\BUSINESS.VentasMK.pdb
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\DATA.VentasMK.dll
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\ENTITIES.dll
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\EntityFramework.dll
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\DATA.VentasMK.pdb
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\DATA.VentasMK.dll.config
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\ENTITIES.pdb
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\EntityFramework.xml
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\obj\Debug\BUSINESS.VentasMK.csprojAssemblyReference.cache
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\obj\Debug\BUSINESS.VentasMK.csproj.CoreCompileInputs.cache
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\obj\Debug\BUSINESS.VentasMK.csproj.CopyComplete
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\obj\Debug\BUSINESS.VentasMK.dll
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\obj\Debug\BUSINESS.VentasMK.pdb
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Cecilio\source\repos\VentasMK\BUSINESS.VentasMK\bin\Debug\Newtonsoft.Json.xml

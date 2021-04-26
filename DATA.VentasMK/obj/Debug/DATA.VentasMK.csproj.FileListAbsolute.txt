@@ -1,0 +1,14 @@
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\DATA.VentasMK.dll.config
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\DATA.VentasMK.dll
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\DATA.VentasMK.pdb
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\ENTITIES.dll
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\EntityFramework.dll
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\ENTITIES.pdb
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\EntityFramework.xml
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\obj\Debug\DATA.VentasMK.csprojAssemblyReference.cache
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\obj\Debug\DATA.VentasMK.csproj.CoreCompileInputs.cache
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\obj\Debug\DATA.VentasMK.csproj.CopyComplete
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\obj\Debug\DATA.VentasMK.dll
+C:\Users\Cecilio\source\repos\VentasMK\DATA.VentasMK\obj\Debug\DATA.VentasMK.pdb

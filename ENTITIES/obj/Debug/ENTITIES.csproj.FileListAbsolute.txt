@@ -1,0 +1,6 @@
+C:\Users\Cecilio\source\repos\VentasMK\ENTITIES\bin\Debug\ENTITIES.dll
+C:\Users\Cecilio\source\repos\VentasMK\ENTITIES\bin\Debug\ENTITIES.pdb
+C:\Users\Cecilio\source\repos\VentasMK\ENTITIES\obj\Debug\ENTITIES.csprojAssemblyReference.cache
+C:\Users\Cecilio\source\repos\VentasMK\ENTITIES\obj\Debug\ENTITIES.csproj.CoreCompileInputs.cache
+C:\Users\Cecilio\source\repos\VentasMK\ENTITIES\obj\Debug\ENTITIES.dll
+C:\Users\Cecilio\source\repos\VentasMK\ENTITIES\obj\Debug\ENTITIES.pdb
