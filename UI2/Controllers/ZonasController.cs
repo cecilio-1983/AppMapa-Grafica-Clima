@@ -11,7 +11,7 @@ using ENTITIES;
 
 namespace UI2.Controllers
 {
-    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ZonasController : ApiController
     {
         private Log logger = new Log(HostingEnvironment.ApplicationPhysicalPath + "Logs/Log_" + DateTime.Now.ToString("yyyy-MM-dd") + ".log");
